@@ -34,6 +34,16 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <div class="container">
+                        <form method="POST">
+                          <fieldset>
+                            <legend>Form</legend>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </fieldset>
+                        </form>
+                    </div>
                     <p class="fw-bold text-success mb-2">Contacts</p>
                     <h2 class="fw-bold">How you can reach us</h2>
                 </div>
